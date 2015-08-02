@@ -24,6 +24,7 @@ promedio_distancia(max_distan_us){
 
 void robot::engine::inicializar(){
   /*El robot estará detenido al principio*/
+  motor_principal.setSpeed(180);// aunque la velocidad puede ser configurda
   distancia_recorrida = 0;
   cambiarEstado(e_detener, INICIO_SALIDA);
   Serial.begin(baudios);
